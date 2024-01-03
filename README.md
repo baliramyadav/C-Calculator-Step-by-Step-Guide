@@ -126,7 +126,7 @@ namespace Csharp_Programming_Examples
 
 ```
 
-## Uderstand source code in details
+## Understand source code in details
 --------------------------
 ```sh
 using System;
