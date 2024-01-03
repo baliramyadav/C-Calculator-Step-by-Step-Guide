@@ -126,6 +126,82 @@ namespace Csharp_Programming_Examples
 
 ```
 
+## Uderstand source code in details
+--------------------------
+```sh
+using System;
+
+namespace Csharp_Programming_Examples
+{
+    internal class Calculator
+    {
+        static void Main(string[] args)
+        {
+            int firstNumber, secondNumber, choice;
+            float result;
+            
+            // Display welcome message
+            Console.WriteLine("========= Calculator Programming =========");
+            
+            // Accept user input for the first number
+            Console.WriteLine("\n Enter your first number:");
+            firstNumber = Convert.ToInt32(Console.ReadLine());
+            
+            // Accept user input for the second number
+            Console.WriteLine("\n Enter your second number:");
+            secondNumber = Convert.ToInt32(Console.ReadLine());  
+            
+            // Display menu for operations
+            Console.WriteLine("Please select an operation:");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraction");
+            Console.WriteLine("3. Multiplication");
+            Console.WriteLine("4. Division");
+            Console.WriteLine("5. Exit the calculator");
+
+            // Accept user choice for operation
+            choice = Convert.ToInt32(Console.ReadLine());
+            
+            // Perform operation based on user choice
+            switch(choice)
+            {
+                case 1:
+                    // Addition operation
+                    result = firstNumber + secondNumber;
+                    Console.WriteLine("Addition Result: " + result);
+                    break;
+                case 2:
+                    // Subtraction operation
+                    result = firstNumber - secondNumber;
+                    Console.WriteLine("Subtraction Result: " + result);
+                    break;
+                case 3:
+                    // Multiplication operation
+                    result = firstNumber * secondNumber;
+                    Console.WriteLine("Multiplication Result: " + result);
+                    break;
+                case 4:
+                    // Division operation
+                    // Note: This code assumes the user won't divide by zero for simplicity.
+                    // In practice, additional checks for division by zero should be included.
+                    result = (float)firstNumber / secondNumber;
+                    Console.WriteLine("Division Result: " + result);
+                    break;
+                case 5:
+                    // Exit the calculator
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice! Please select a valid operation.");
+                    break;
+            }
+            
+            Console.ReadLine(); // Keep the console open until user input
+        }
+    }
+}
+
+```
 # Watch full [Tutorial video](https://www.youtube.com/coderbaba)
 
 Don't foget to subscribe my youtube 💻channel [@CoderBaba](https://www.youtube.com/coderbaba)
